@@ -6,19 +6,16 @@ const SplitPoylgon = {
     const state = {
       clickCount: 0,
       Draw: options.draw,
+      dist: options.dist||5
     };
     return state;
   },
   onClick: function(state) {
-    console.log(state);
     if (state.clickCount === 0) {
       state.clickCount++;
 
       // this.changeMode("draw_line_string")
       return;
-    } else if (state.clickCount === 1) {
-      console.log(state.Draw.getAll());
-      
     }
   },
   onMouseMove: function(state, e) {
@@ -39,7 +36,7 @@ const SplitPoylgon = {
           id: "Adsorption",
           geometry: {
             type: "Point",
-            coordinates: snapped.geometry.coordinates,
+            coordinates: snapped.properties.dist>state.dist?[e.lngLat.lng, e.lngLat.lat]:snapped.geometry.coordinates,
           },
         });
         this.addFeature(point2); // puts the point on the map

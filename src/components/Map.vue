@@ -67,7 +67,8 @@ export default {
           break;
         case "split":
           this.Draw.changeMode("splitPolygon",{
-            draw:this.Draw
+            draw:this.Draw,
+            message:this.$message,
           });
           this.drawState = "split";
           break;

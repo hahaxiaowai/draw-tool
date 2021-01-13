@@ -10,6 +10,8 @@
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.2.0",
     "@turf/helpers": "^6.1.4",
+    "@turf/line-intersect": "^6.2.0",
+    "@turf/line-split": "^6.2.0",
     "@turf/nearest-point-on-line": "^6.0.2",
     "@turf/polygon-to-line": "^6.0.3",
     "ant-design-vue": "^1.7.2",
